@@ -1,7 +1,7 @@
 // components
 import NavBar from "../components/NavBar";
 import SocialIconComp1 from "../components/SocialIconComp1";
-import SportCardHeadlines from "../components/SportCardHeadlines";
+import HighLights from "../components/HighLights";
 
 function __PartialHero() {
   return (
@@ -36,17 +36,7 @@ export default function LandingPage({ site_name }) {
       <NavBar site_name={site_name} />
       <__PartialHero />
       <main className="mt-5 px-5 sm:px-10 md:px-20 lg:px-36">
-          <div className="block md:flex gap-x-5">
-            <div className="w-1/3">
-              <SportCardHeadlines title="C. Ronaldo injured in the UCL final" newsChannel="UCL News Media" date="26 Jul 2024" col={['bg-blue-500','text-blue-200']} />
-            </div>
-            <div className="w-1/3">
-              <SportCardHeadlines title="C. Ronaldo injured in the UCL final" newsChannel="UCL News Media" date="26 Jul 2024" col={['bg-red-500','text-red-200']} />
-            </div>
-            <div className="w-1/3">
-              <SportCardHeadlines title="C. Ronaldo injured in the UCL final" newsChannel="UCL News Media" date="26 Jul 2024" col={['bg-yellow-500','text-yellow-200']} />
-            </div>
-          </div>
+          <HighLights />
       </main>
     </>
   );
