@@ -19,3 +19,7 @@
 .bg-cs-dark-light {
   background: var(--s-dark-light);
 }
+
+.text-yellow-1{
+    color:var(--s-yellow-1);
+}
