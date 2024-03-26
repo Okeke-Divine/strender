@@ -34,8 +34,8 @@ export default function LandingPage({ site_name }) {
     <>
       <NavBar site_name={site_name} />
       <__PartialHero />
-      <main className="mt-5 px-20">
-          <div className="p-2 bg-white"></div>
+      <main className="mt-5 px-5 sm:px-10 md:px-20 lg:px-36">
+    
       </main>
     </>
   );
