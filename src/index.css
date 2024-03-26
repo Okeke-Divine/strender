@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --s-yellow-1:#eafa04;
-    --s-yellow-2:#717830;
-    --s-yellow-3:#dadc61;
-    --s-grey-1:#b9aaab;
-    --s-grey-2:#615561;
-    --s-dark:rgb(25,36,31);
+:root {
+  --s-yellow-1: #eafa04;
+  --s-yellow-2: #717830;
+  --s-yellow-3: #dadc61;
+  --s-grey-1: #b9aaab;
+  --s-grey-2: #615561;
+  --s-dark: rgb(21, 25, 36);
+  --s-dark-light: rgb(35, 41, 58);
 }
 
-.bg-cs-dark{
-    background: var(--s-dark);
+.bg-cs-dark {
+  background: var(--s-dark);
+}
+
+.bg-cs-dark-light {
+  background: var(--s-dark-light);
 }
