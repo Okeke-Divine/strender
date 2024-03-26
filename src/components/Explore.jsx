@@ -1,3 +1,4 @@
+//components
 import ComponentTitle from "../components/__global/ComponentTitle";
 
 export default function Explore() {

@@ -4,6 +4,7 @@ import SocialIconComp1 from "../components/SocialIconComp1";
 import HighLights from "../components/HighLights";
 import Explore from "../components/Explore";
 import MostRead from "../components/MostRead";
+import LatestNews from "../components/LatestNews";
 
 function __PartialHero() {
   return (
@@ -41,6 +42,7 @@ export default function LandingPage({ site_name }) {
         <HighLights />
         <Explore />
         <MostRead />
+        <LatestNews />
       </main>
     </>
   );
