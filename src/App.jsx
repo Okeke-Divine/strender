@@ -25,7 +25,7 @@ function App() {
             <NavBar site_name={capitalizedSiteName} />
             <Routes>
               <Route path="/" element={<LandingPage site_name={capitalizedSiteName} />} />
-              <Route path="*" element={NotFound} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
         </main>

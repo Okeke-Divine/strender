@@ -24,6 +24,18 @@
     color:var(--s-yellow-1);
 }
 
+.cs-bg-yellow-1{
+  background:var(--s-yellow-1);
+}
+
+.cs-bg-yellow-2{
+  background:var(--s-yellow-2);
+}
+
+.cs-bg-yellow-3{
+  background:var(--s-yellow-3);
+}
+
 .cs-text-yellow-2{
   color: var(--s-yellow-2);
 }
