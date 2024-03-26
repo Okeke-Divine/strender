@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 // data files
 import applicationConfig from "./data/applicationConfig.json";
+// components
+import NavBar from "../components/NavBar";
 //pages
 import LandingPage from "./pages/landingPage";
 // utils
@@ -16,7 +18,10 @@ function App() {
   return (
     <>
       <div className="bg-cs-dark min-h-[100vh]">
-        <LandingPage site_name={capitalizedSiteName} />
+        <NavBar />
+        <main>
+          <LandingPage site_name={capitalizedSiteName} />
+        </main>
       </div>
     </>
   );
