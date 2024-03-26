@@ -9,6 +9,9 @@ lerna-debug.log*
 
 _ignore
 
+gp.bat
+gt.bat
+
 node_modules
 dist
 dist-ssr
