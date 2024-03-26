@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import applicationConfig from "./data/applicationConfig.json";
 // components
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 //pages
 import LandingPage from "./pages/landingPage";
 import NotFound from "./pages/errors/NotFound"
@@ -27,6 +28,7 @@ function App() {
               <Route path="/" element={<LandingPage site_name={capitalizedSiteName} />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </main>
       </div>
