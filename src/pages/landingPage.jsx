@@ -1,20 +1,25 @@
-export default function LandingPage() {
+export default function LandingPage({site_name}) {
   const links = [
     { url: "#", name: "Home" },
-    { url: "#", name: "Home" },
+    { url: "#", name: "Sports" },
+    { url: "#", name: "Posts" },
+    { url: "#", name: "About" },
+    { url: "#", name: "Contact" },
   ];
   return (
     <>
       <div className="p-5 md:py-8 px-5 md:px-10 bg-cs-dark-light">
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-x-16">
-            <div>Strender</div>
-            <div className="flex gap-x-5">
-              <div>
-                <a className="text-gray-400" href="#">
-                  Test
-                </a>
-              </div>
+          <div className="flex items-center gap-x-32">
+            <div className="text-white font-bold text-2xl">{site_name}</div>
+            <div className="flex items-center gap-x-5">
+              {links.map((link, index) => (
+                <div>
+                  <a className={`${(link.name == 'Home') ? 'text-white font-bold border-b-[2px]' : 'text-gray-400'} border-yellow-300 duration-300 hover:text-white`} href={link.url}>
+                    {link.name}
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
           {/* login and signup button */}

@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <div className="bg-cs-dark min-h-[100vh]">
-        <LandingPage />
+        <LandingPage site_name={capitalizedSiteName} />
       </div>
     </>
   );
