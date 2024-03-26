@@ -1,4 +1,11 @@
 import { useEffect } from "react";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+
 // data files
 import applicationConfig from "./data/applicationConfig.json";
 // components
@@ -18,7 +25,7 @@ function App() {
   return (
     <>
       <div className="bg-cs-dark min-h-[100vh]">
-        <NavBar site_name={capitalizedSiteName} />
+        {/* <NavBar site_name={capitalizedSiteName} /> */}
         <main>
           <LandingPage site_name={capitalizedSiteName} />
         </main>

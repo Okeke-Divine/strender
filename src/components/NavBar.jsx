@@ -1,4 +1,4 @@
-// import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function NavBar({ site_name }) {
   const links = [
@@ -17,7 +17,7 @@ export default function NavBar({ site_name }) {
             <div className="hidden sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300">
               {links.map((link, index) => (
                 <div key={index}>
-                  <a
+                  <Link
                     className={`${
                       link.name == "Home"
                         ? "text-white font-bold border-b-[2px]"
@@ -27,7 +27,7 @@ export default function NavBar({ site_name }) {
                     
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
