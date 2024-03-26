@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import SocialIconComp1 from "../components/SocialIconComp1";
 import HighLights from "../components/HighLights";
 import Explore from "../components/Explore";
+import MostRead from "../components/MostRead";
 
 function __PartialHero() {
   return (
@@ -39,6 +40,7 @@ export default function LandingPage({ site_name }) {
       <main className="mt-5 px-5 sm:px-10 md:px-20 lg:px-36">
         <HighLights />
         <Explore />
+        <MostRead />
       </main>
     </>
   );
