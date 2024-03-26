@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+//svg
+import _Illustration404 from "../../assets/svgs/404-illustration.svg";
+
 export default function NotFound() {
   function back() {
     window.history.back();
@@ -6,7 +9,7 @@ export default function NotFound() {
   return (
     <>
       <main className="mt-5 px-5 min-h-[500px] sm:px-10 md:px-20 lg:px-36 flex items-center">
-        <div className="block md:flex w-full">
+        <div className="block md:flex w-full items-center justify-between">
           <div className="w-full md:w-1/2">
             <div className="text-center font-bold text-white text-6xl">
               404 - Not Found
@@ -32,7 +35,9 @@ export default function NotFound() {
               </div>
             </div>
           </div>
-          <div className="w-1/2"></div>
+          <div className="w-full w-1/2 mt-2 md:mt-0 flex justify-center md:justify-end">
+            <img src={_Illustration404} className="w-[500px] md:w-[600px]" />
+          </div>
         </div>
       </main>
     </>
