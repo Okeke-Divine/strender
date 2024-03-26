@@ -20,6 +20,14 @@
   background: var(--s-dark-light);
 }
 
-.text-yellow-1{
+.cs-text-yellow-1{
     color:var(--s-yellow-1);
+}
+
+.cs-text-yellow-2{
+  color: var(--s-yellow-2);
+}
+
+.cs-text-yellow-3{
+  color: var(--s-yellow-3);
 }

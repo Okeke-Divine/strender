@@ -9,7 +9,7 @@ function __PartialHero() {
       <div className="p-5 md:py-8 px-5 md:px-10 bg-cs-dark-light">
         <div>
           <div className="font-bold text-5xl">
-            <span className="text-yellow-1">Sports</span>{" "}
+            <span className="cs-text-yellow-1">Sports</span>{" "}
             <span className="text-gray-400">articles</span>
           </div>
           <div className="w-[40%] my-7">
