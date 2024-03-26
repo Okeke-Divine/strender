@@ -2,6 +2,7 @@
 import NavBar from "../components/NavBar";
 import SocialIconComp1 from "../components/SocialIconComp1";
 import HighLights from "../components/HighLights";
+import Explore from "../components/Explore";
 
 function __PartialHero() {
   return (
@@ -37,14 +38,7 @@ export default function LandingPage({ site_name }) {
       <__PartialHero />
       <main className="mt-5 px-5 sm:px-10 md:px-20 lg:px-36">
         <HighLights />
-        <div className="mt-5">
-          <div className="flex justify-between items-center">
-            <div className="text-xl font-bold text-white">Explore</div>
-            <div>
-              <a href="#" className="cs-text-yellow-2">See More</a>
-            </div>
-          </div>
-        </div>
+        <Explore />
       </main>
     </>
   );

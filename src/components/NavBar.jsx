@@ -32,12 +32,12 @@ export default function NavBar({site_name}) {
           {/* login and signup button */}
           <div className="flex gap-x-4">
             <div>
-              <button className="duration-300 hover:bg-gray-600 hover:text-white rounded-3xl border-[1px] text-gray-200 border-gray-200 p-2 px-5 cursor-pointer">
+              <button className="duration-300 hover:bg-gray-600 hover:text-white rounded-3xl border-[1px] text-gray-200 border-gray-200 p-1 px-4 md:p-2 md:px-5 cursor-pointer">
                 Login
               </button>
             </div>
             <div>
-              <button className="duration-300 hover:bg-gray-700 rounded-3xl border-[1px] text-white bg-gray-600 border-gray-200 p-2 px-5 cursor-pointer">
+              <button className="duration-300 hover:bg-gray-700 rounded-3xl border-[1px] text-white bg-gray-600 border-gray-200 p-1 px-4 md:p-2 md:px-5 cursor-pointer">
                 Signup
               </button>
             </div>
