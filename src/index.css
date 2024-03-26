@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 :root{
-    --d:1;
+    --s-yellow-1:#eafa04;
+    --s-yellow-2:#717830;
+    --s-yellow-3:#dadc61;
+    --s-grey-1:#b9aaab;
+    --s-grey-2:#615561;
 }
