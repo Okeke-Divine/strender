@@ -1,10 +1,5 @@
 import { useEffect } from "react";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // data files
 import applicationConfig from "./data/applicationConfig.json";
@@ -25,9 +20,13 @@ function App() {
   return (
     <>
       <div className="bg-cs-dark min-h-[100vh]">
-        {/* <NavBar site_name={capitalizedSiteName} /> */}
         <main>
-          <LandingPage site_name={capitalizedSiteName} />
+          <BrowserRouter>
+            <NavBar site_name={capitalizedSiteName} />
+            <Routes>
+              <Route path="/" element={<LandingPage site_name={capitalizedSiteName} />} />
+            </Routes>
+          </BrowserRouter>
         </main>
       </div>
     </>
