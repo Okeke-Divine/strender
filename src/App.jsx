@@ -13,6 +13,7 @@ import capitalizeFirstString from "./utils/capitalizeFirstString";
 
 function App() {
   const siteName = applicationConfig["site_name"];
+  const siteDesc = applicationConfig["description"];
   const capitalizedSiteName = capitalizeFirstString(siteName);
 
   useEffect(function () {
@@ -25,10 +26,10 @@ function App() {
           <BrowserRouter>
             <NavBar site_name={capitalizedSiteName} />
             <Routes>
-              <Route path="/" element={<LandingPage site_name={capitalizedSiteName} />} />
+              <Route path="/" element={<LandingPage site_name={capitalizedSiteName} siteDesc={siteDesc} />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-            <Footer />
+            <Footer site_name={capitalizedSiteName} siteDesc={siteDesc} />
           </BrowserRouter>
         </main>
       </div>

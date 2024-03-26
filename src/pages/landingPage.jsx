@@ -4,7 +4,7 @@ import Explore from "../components/Explore";
 import MostRead from "../components/MostRead";
 import LatestNews from "../components/LatestNews";
 
-function __PartialHero() {
+function __PartialHero({siteDesc}) {
   return (
     <>
       <div className="p-5 md:py-8 px-5 md:px-10 bg-cs-dark-light">
@@ -18,7 +18,7 @@ function __PartialHero() {
           </div>
           <div className="block md:flex justify-between items-center">
             <div className="text-gray-400">
-              All types of sport posts in one place
+              {siteDesc}
             </div>
             <div className="flex mt-2 md:mt-0 gap-x-2 md:gap-x-3 items-center">
               <SocialIconComp1 />
@@ -31,10 +31,10 @@ function __PartialHero() {
   );
 }
 
-export default function LandingPage({ site_name }) {
+export default function LandingPage({ site_name, siteDesc }) {
   return (
     <>
-      <__PartialHero />
+      <__PartialHero siteDesc={siteDesc} />
       <main className="mt-5 px-5 sm:px-10 md:px-20 lg:px-36">
         <HighLights />
         <Explore />
