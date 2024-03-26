@@ -23,7 +23,7 @@ export default function NavBar({ site_name }) {
                         ? "text-white font-bold border-b-[2px]"
                         : "text-gray-400"
                     } border-yellow-300 duration-300 hover:text-white`}
-                    href={link.url}
+                    to={link.url}
                     
                   >
                     {link.name}

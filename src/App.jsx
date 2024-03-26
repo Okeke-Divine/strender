@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 // data files
 import applicationConfig from "./data/applicationConfig.json";
 // components
 import NavBar from "./components/NavBar";
 //pages
 import LandingPage from "./pages/landingPage";
+import NotFound from "./pages/errors/NotFound"
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
 
@@ -25,6 +25,7 @@ function App() {
             <NavBar site_name={capitalizedSiteName} />
             <Routes>
               <Route path="/" element={<LandingPage site_name={capitalizedSiteName} />} />
+              <Route path="*" element={NotFound} />
             </Routes>
           </BrowserRouter>
         </main>
