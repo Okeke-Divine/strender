@@ -1,10 +1,10 @@
 export default function NavBar({site_name}) {
   const links = [
-    { url: "#", name: "Home" },
-    { url: "#", name: "Sports" },
-    { url: "#", name: "Posts" },
-    { url: "#", name: "About" },
-    { url: "#", name: "Contact" },
+    { url: "/", name: "Home" },
+    { url: "/sports", name: "Sports" },
+    { url: "/posts", name: "Posts" },
+    { url: "/news", name: "News" },
+    { url: "/about", name: "About" },
   ];
   return (
     <>
