@@ -8,4 +8,9 @@
     --s-yellow-3:#dadc61;
     --s-grey-1:#b9aaab;
     --s-grey-2:#615561;
+    --s-dark:rgb(25,36,31);
+}
+
+.bg-cs-dark{
+    background: var(--s-dark);
 }
