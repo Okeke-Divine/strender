@@ -1,6 +1,7 @@
 // components
 import NavBar from "../components/NavBar";
 import SocialIconComp1 from "../components/SocialIconComp1";
+import SportCard1 from "../components/SportCard1";
 
 function __PartialHero() {
   return (
@@ -35,7 +36,11 @@ export default function LandingPage({ site_name }) {
       <NavBar site_name={site_name} />
       <__PartialHero />
       <main className="mt-5 px-5 sm:px-10 md:px-20 lg:px-36">
-    
+          <div className="block md:flex gap-x-5">
+            <div className="w-1/3">
+              <SportCard1 />
+            </div>
+          </div>
       </main>
     </>
   );
