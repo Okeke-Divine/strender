@@ -1,4 +1,6 @@
-export default function NavBar({site_name}) {
+// import {Link} from "react-router-dom"
+
+export default function NavBar({ site_name }) {
   const links = [
     { url: "/", name: "Home" },
     { url: "/sports", name: "Sports" },
@@ -14,7 +16,7 @@ export default function NavBar({site_name}) {
             <div className="text-white font-bold text-2xl">{site_name}</div>
             <div className="hidden sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300">
               {links.map((link, index) => (
-                <div>
+                <div key={index}>
                   <a
                     className={`${
                       link.name == "Home"
@@ -22,6 +24,7 @@ export default function NavBar({site_name}) {
                         : "text-gray-400"
                     } border-yellow-300 duration-300 hover:text-white`}
                     href={link.url}
+                    
                   >
                     {link.name}
                   </a>
