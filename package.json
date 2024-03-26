@@ -1,7 +1,10 @@
 {
-  "name": "google-adsense-bot",
+  "name": "strender",
   "private": true,
   "version": "0.0.0",
+  "author": "Okeke Divine-Vessel",
+  "authorUrl": "https://github.com/Okeke-Divine",
+  "authorUrl2": "https://okekedivine.vercel.app/",
   "type": "module",
   "scripts": {
     "dev": "vite",
