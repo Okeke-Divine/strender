@@ -6,7 +6,8 @@ import applicationConfig from "./data/applicationConfig.json";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 //pages
-import LandingPage from "./pages/landingPage";
+import LandingPage from "./pages/LandingPage";
+import Home from "./pages/Home";
 import NotFound from "./pages/errors/NotFound"
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
@@ -26,7 +27,8 @@ function App() {
           <BrowserRouter>
             <NavBar site_name={capitalizedSiteName} />
             <Routes>
-              <Route path="/" element={<LandingPage site_name={capitalizedSiteName} siteDesc={siteDesc} />} />
+              <Route path="/" element={<LandingPage site_name={capitalizedSiteName} />} />
+              <Route path="/home" element={<Home site_name={capitalizedSiteName} siteDesc={siteDesc} />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer site_name={capitalizedSiteName} siteDesc={siteDesc} />

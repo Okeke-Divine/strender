@@ -8,7 +8,7 @@ export default function Footer({ site_name, siteDesc }) {
     },
     {
       name: "Home",
-      url: "/",
+      url: "/home",
     },
     {
       name: "Sports",
@@ -35,7 +35,7 @@ export default function Footer({ site_name, siteDesc }) {
             <div className="text-white font-bold text-4xl">{site_name}</div>
             <div className="text-gray-400 max-w-[60%] mt-1">{siteDesc}</div>
           </div>
-          <div className="mt-5 md:mt-0 w-full w-3/4 block md:flex gap-x-2 justify-between">
+          <div className="mt-5 md:mt-0 w-full md:w-3/4 block md:flex gap-x-2 justify-between">
             {/* footer link container */}
             <div className="mt-1 md:mt-0 w-full md:w-1/3 p-2">
               <div className="font-bold text-xl text-white">Links (Pages)</div>

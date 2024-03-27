@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function NavBar({ site_name }) {
   const links = [
-    { url: "/", name: "Home" },
+    { url: "/home", name: "Home" },
     { url: "/sports", name: "Sports" },
     { url: "/discover", name: "Discover" },
     { url: "/news", name: "News" },
