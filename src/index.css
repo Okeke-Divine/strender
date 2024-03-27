@@ -53,11 +53,15 @@
 /* begin custom scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
-  height: 2px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--s-dark);
+}
+
+.scroll-bar-track-2::-webkit-scrollbar-track {
+  background: var(--s-dark-light)!important;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -23,7 +23,7 @@ export default function Category() {
       <div className="mt-5">
         <ComponentTitle title="Category" url="/category" />
         {/* list of sports */}
-        <div className="flex gap-x-5 overflow-auto whitespace-nowrap mt-2">
+        <div className="flex gap-x-5 overflow-auto whitespace-nowrap mt-2 scroll-bar-track-2">
           {categories.map((category, index) => (
             <>
               <CategoryCardCircle
