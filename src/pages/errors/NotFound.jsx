@@ -20,14 +20,17 @@ export default function NotFound() {
               <div>
                 <button
                   onClick={__window_back}
-                  className="duration-300 hover:bg-gray-600 hover:text-white rounded-3xl border-[1px] text-gray-200 border-gray-200 p-1 px-4 md:p-2 md:px-5 cursor-pointer"
+                  className="flex items-center duration-300 hover:bg-gray-600 hover:text-white rounded-3xl border-[1px] text-gray-200 border-gray-200 p-2 px-5 cursor-pointer"
                 >
-                  Back
+                  <div className="relative top-1">
+                    <i class="fi fi-tr-arrow-small-left"></i>
+                  </div>
+                  <div>Back</div>
                 </button>
               </div>
               <div>
                 <Link to="/home">
-                  <button className="duration-300 bg-orange-400 hover:text-white rounded-3xl border-[1px] text-gray-200 p-1 px-4 md:p-2 md:px-5 cursor-pointer">
+                  <button className="duration-300 bg-orange-400 hover:text-white rounded-3xl border-[1px] text-gray-200 p-2 px-5 cursor-pointer">
                     Home
                   </button>
                 </Link>
