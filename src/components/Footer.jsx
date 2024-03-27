@@ -15,8 +15,8 @@ export default function Footer({ site_name, siteDesc }) {
       url: "/sports",
     },
     {
-      name: "Posts",
-      url: "/posts",
+      name: "Discover",
+      url: "/discover",
     },
     {
       name: "News",

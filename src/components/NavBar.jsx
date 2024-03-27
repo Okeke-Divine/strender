@@ -4,7 +4,7 @@ export default function NavBar({ site_name }) {
   const links = [
     { url: "/", name: "Home" },
     { url: "/sports", name: "Sports" },
-    { url: "/posts", name: "Posts" },
+    { url: "/discover", name: "Discover" },
     { url: "/news", name: "News" },
     { url: "/about", name: "About" },
   ];
