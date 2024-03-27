@@ -3,7 +3,19 @@ import ComponentTitle from "./__global/ComponentTitle";
 import CategoryCardCircle from "./CategoryCardCircle";
 
 export default function Category() {
-  const categories = [{ title: "Football", url: "/sports/football" }];
+  const categories = [
+    { title: "Football", url: "/sports/football" },
+    { title: "Basketball", url: "/sports/basketball" },
+    { title: "Boxing", url: "/sports/boxing" },
+    { title: "Volley Ball", url: "/sports/volleyball" },
+    { title: "Basketball", url: "/sports/basketball" },
+    { title: "Hockey", url: "/sports/hockey" },
+    { title: "Dart", url: "/sports/dart" },
+    { title: "Pokers", url: "/sports/pokers" },
+    { title: "Race", url: "/sports/race" },
+    { title: "Tonarments", url: "/sports/tonarments" },
+    { title: "Sprints", url: "/sports/sprints" },
+  ];
   return (
     <>
       <div className="mt-5">
@@ -19,17 +31,6 @@ export default function Category() {
               />
             </>
           ))}
-          <CategoryCardCircle title="Footbal" url="/sports/football" />
-          <CategoryCardCircle title="Basketball" url="/sports/football" />
-          <CategoryCardCircle title="Boxing" url="/sports/football" />
-          <CategoryCardCircle title="Volley Ball" url="/sports/football" />
-          <CategoryCardCircle title="Basketball" url="/sports/football" />
-          <CategoryCardCircle title="Hockey" url="/sports/football" />
-          <CategoryCardCircle title="Dart" url="/sports/football" />
-          <CategoryCardCircle title="Pokers" url="/sports/football" />
-          <CategoryCardCircle title="Race" url="/sports/football" />
-          <CategoryCardCircle title="Tonarments" url="/sports/football" />
-          <CategoryCardCircle title="Sprints" url="/sports/football" />
         </div>
       </div>
     </>
