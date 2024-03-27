@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
+// utils
+import { __window_back } from "../../utils/windowNavigation";
 //svg
 import _Illustration404 from "../../assets/svgs/404-illustration.svg";
 
 export default function NotFound() {
-  function back() {
-    window.history.back();
-  }
   return (
     <>
       <main className="mt-5 px-5 min-h-[500px] sm:px-10 md:px-20 lg:px-36 flex items-center">
@@ -20,7 +19,7 @@ export default function NotFound() {
             <div className="flex justify-center mt-3 gap-x-3">
               <div>
                 <button
-                  onClick={back}
+                  onClick={__window_back}
                   className="duration-300 hover:bg-gray-600 hover:text-white rounded-3xl border-[1px] text-gray-200 border-gray-200 p-1 px-4 md:p-2 md:px-5 cursor-pointer"
                 >
                   Back
@@ -35,7 +34,7 @@ export default function NotFound() {
               </div>
             </div>
           </div>
-          <div className="w-full w-1/2 mt-2 md:mt-0 flex justify-center md:justify-end">
+          <div className="w-full md:w-1/2 mt-2 md:mt-0 flex justify-center md:justify-end">
             <img src={_Illustration404} className="w-[500px] md:w-[600px]" />
           </div>
         </div>
