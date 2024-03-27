@@ -4,6 +4,7 @@ import CategoryCardCircle from "./CategoryCardCircle";
 
 export default function Category() {
   const categories = [
+    { title: "All", url: "/sports/all" },
     { title: "Football", url: "/sports/football" },
     { title: "Basketball", url: "/sports/basketball" },
     { title: "Boxing", url: "/sports/boxing" },
@@ -15,6 +16,7 @@ export default function Category() {
     { title: "Race", url: "/sports/race" },
     { title: "Tonarments", url: "/sports/tonarments" },
     { title: "Sprints", url: "/sports/sprints" },
+    { title: "Others", url: "/sports/all" },
   ];
   return (
     <>
