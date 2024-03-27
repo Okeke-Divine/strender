@@ -94,7 +94,7 @@ export default function Footer({ site_name, siteDesc }) {
         <div className="w-[100%] my-3">
           <div className="w-full bg-gray-700 h-[1px]"></div>
         </div>
-        <div className="text-center text-white font-semibold text-xl">
+        <div className="text-center text-white font-semibold text-md">
           &copy; {site_name} 2024 - Built by{" "}
           <a href="https://okekedivine.vercel.app" target={"_blank"}>
             <span className="cs-text-yellow-1">Dev Divine</span>
