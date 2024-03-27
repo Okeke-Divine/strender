@@ -21,8 +21,8 @@ function __PartialHero({siteDesc}) {
               {siteDesc}
             </div>
             <div className="flex mt-2 md:mt-0 gap-x-2 md:gap-x-3 items-center">
-              <SocialIconComp1 />
-              <SocialIconComp1 />
+              <SocialIconComp1 iconClass="fi fi-brands-instagram" url="#" />
+              <SocialIconComp1 iconClass="fi fi-brands-facebook" url="#" />
             </div>
           </div>
         </div>
