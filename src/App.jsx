@@ -8,13 +8,14 @@ import Footer from "./components/Footer";
 //pages
 import LandingPage from "./pages/LandingPage";
 import Home from "./pages/Home";
-import NotFound from "./pages/errors/NotFound"
+import NotFound from "./pages/errors/NotFound";
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
 
 function App() {
   const siteName = applicationConfig["site_name"];
   const siteDesc = applicationConfig["description"];
+  const lastestNewsDesc = applicationConfig["lastes_news_description"];
   const capitalizedSiteName = capitalizeFirstString(siteName);
 
   useEffect(function () {
@@ -27,8 +28,20 @@ function App() {
           <BrowserRouter>
             <NavBar site_name={capitalizedSiteName} />
             <Routes>
-              <Route path="/" element={<LandingPage site_name={capitalizedSiteName} />} />
-              <Route path="/home" element={<Home site_name={capitalizedSiteName} siteDesc={siteDesc} />} />
+              <Route
+                path="/"
+                element={<LandingPage site_name={capitalizedSiteName} />}
+              />
+              <Route
+                path="/home"
+                element={
+                  <Home
+                    site_name={capitalizedSiteName}
+                    siteDesc={siteDesc}
+                    lastestNewsDesc={lastestNewsDesc}
+                  />
+                }
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer site_name={capitalizedSiteName} siteDesc={siteDesc} />

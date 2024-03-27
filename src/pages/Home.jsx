@@ -31,7 +31,7 @@ function __PartialHero({siteDesc}) {
   );
 }
 
-export default function Home({ site_name, siteDesc }) {
+export default function Home({ site_name, siteDesc, lastestNewsDesc }) {
   return (
     <>
       <__PartialHero siteDesc={siteDesc} />
@@ -39,7 +39,7 @@ export default function Home({ site_name, siteDesc }) {
         <HighLights />
         <Explore />
         <MostRead />
-        <LatestNews />
+        <LatestNews lastestNewsDesc={lastestNewsDesc} />
       </main>
     </>
   );
