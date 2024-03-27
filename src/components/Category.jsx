@@ -25,13 +25,11 @@ export default function Category() {
         {/* list of sports */}
         <div className="flex gap-x-5 overflow-auto whitespace-nowrap mt-2 scroll-bar-track-2">
           {categories.map((category, index) => (
-            <>
-              <CategoryCardCircle
-                title={category.title}
-                url={category.url}
-                key={index}
-              />
-            </>
+            <CategoryCardCircle
+              title={category.title}
+              url={category.url}
+              key={index}
+            />
           ))}
         </div>
       </div>
