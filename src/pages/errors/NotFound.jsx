@@ -27,7 +27,7 @@ export default function NotFound() {
                 </button>
               </div>
               <div>
-                <Link to="/">
+                <Link to="/home">
                   <button className="duration-300 bg-orange-400 hover:text-white rounded-3xl border-[1px] text-gray-200 p-1 px-4 md:p-2 md:px-5 cursor-pointer">
                     Home
                   </button>

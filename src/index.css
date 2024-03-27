@@ -20,56 +20,49 @@
   background: var(--s-dark-light);
 }
 
-.cs-text-yellow-1{
-    color:var(--s-yellow-1);
+.cs-text-yellow-1 {
+  color: var(--s-yellow-1);
 }
 
-.cs-bg-yellow-1{
-  background:var(--s-yellow-1);
+.cs-bg-yellow-1 {
+  background: var(--s-yellow-1);
 }
 
-.cs-bg-yellow-2{
-  background:var(--s-yellow-2);
+.cs-bg-yellow-2 {
+  background: var(--s-yellow-2);
 }
 
-.cs-bg-yellow-3{
-  background:var(--s-yellow-3);
+.cs-bg-yellow-3 {
+  background: var(--s-yellow-3);
 }
 
-.cs-text-yellow-2{
+.cs-text-yellow-2 {
   color: var(--s-yellow-2);
 }
 
-.cs-text-yellow-3{
+.cs-text-yellow-3 {
   color: var(--s-yellow-3);
 }
 
 @layer components {
-  .mainComponent{
+  .mainComponent {
     @apply mt-5 px-5 sm:px-10 md:px-20 lg:px-36;
   }
 }
 
-/* custom scroll bar */
-/* width */
+/* begin custom scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
   height: 2px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--s-dark);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--s-yellow-1);
   border-radius: 100px;
   opacity: 0.6;
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  opacity: 1;
-}
+/* end custom scrollbar */
