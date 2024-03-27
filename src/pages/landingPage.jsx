@@ -35,7 +35,7 @@ export default function LandingPage({ site_name, siteDesc }) {
   return (
     <>
       <__PartialHero siteDesc={siteDesc} />
-      <main className="mt-5 px-5 sm:px-10 md:px-20 lg:px-36">
+      <main className="mainComponent">
         <HighLights />
         <Explore />
         <MostRead />
