@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function NavBar({ site_name }) {
   const links = [
     { url: "/home", name: "Home" },
-    { url: "/sports", name: "Sports" },
+    { url: "/category", name: "Category" },
     { url: "/discover", name: "Discover" },
     { url: "/news", name: "News" },
     { url: "/about", name: "About" },

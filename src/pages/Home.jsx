@@ -1,6 +1,6 @@
 import SocialIconComp1 from "../components/SocialIconComp1";
 import HighLights from "../components/HighLights";
-import Explore from "../components/Explore";
+import Category from "../components/Category";
 import MostRead from "../components/MostRead";
 import LatestNews from "../components/LatestNews";
 
@@ -37,7 +37,7 @@ export default function Home({ site_name, siteDesc, lastestNewsDesc }) {
       <__PartialHero siteDesc={siteDesc} />
       <main className="mainComponent">
         <HighLights />
-        <Explore />
+        <Category />
         <MostRead />
         <LatestNews lastestNewsDesc={lastestNewsDesc} />
       </main>

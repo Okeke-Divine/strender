@@ -55,7 +55,6 @@ export default function MostRead() {
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2">
             {mostReadPosts.map((post, index) => (
-              <>
                 <MostReadPostElem
                   url={post.url}
                   title={post.title}
@@ -64,7 +63,6 @@ export default function MostRead() {
                   views={post.views}
                   key={index}
                 />
-              </>
             ))}
           </div>
         </div>

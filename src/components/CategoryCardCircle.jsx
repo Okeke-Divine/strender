@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function ExploreCardCircle({ title, url }) {
+export default function CategoryCardCircle({ title, url }) {
   return (
     <>
       <Link to={url}>
