@@ -57,7 +57,7 @@ export default function Footer({ site_name, siteDesc }) {
             {/* footer link container */}
             <div className="mt-1 md:mt-0 w-full md:w-1/3 p-2">
               <div className="font-bold text-xl text-white">Legal</div>
-              <div>
+              <div className="mt-2">
                 <a
                   href="/t&c"
                   className="text-gray-400 duration-300 hover:text-white"
@@ -80,7 +80,7 @@ export default function Footer({ site_name, siteDesc }) {
               <div className="mt-2">
                 <div>
                   <a
-                    href="#"
+                    href="/credits"
                     className="text-gray-400 duration-300 hover:text-white"
                   >
                     Credits
