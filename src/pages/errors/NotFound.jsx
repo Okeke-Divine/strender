@@ -23,7 +23,7 @@ export default function NotFound() {
                   className="flex items-center duration-300 hover:bg-gray-600 hover:text-white rounded-3xl border-[1px] text-gray-200 border-gray-200 p-2 px-5 cursor-pointer"
                 >
                   <div className="relative top-1">
-                    <i class="fi fi-tr-arrow-small-left"></i>
+                    <i className="fi fi-tr-arrow-small-left"></i>
                   </div>
                   <div>Back</div>
                 </button>

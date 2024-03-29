@@ -6,9 +6,9 @@ import applicationConfig from "./data/applicationConfig.json";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 //pages
-import LandingPage from "./pages/LandingPage";
-import Home from "./pages/Home";
-import NotFound from "./pages/errors/NotFound";
+import LandingPage from "./pages/LandingPage.jsx";
+import Home from "./pages/Home.jsx";
+import NotFound from "./pages/errors/NotFound.jsx";
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
 
