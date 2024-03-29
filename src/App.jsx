@@ -6,7 +6,7 @@ import applicationConfig from "./data/applicationConfig.json";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 //pages
-import LandingPage from "./pages/DefaultPage.jsx";
+import DefaultPage from "./pages/DefaultPage.jsx";
 import Home from "./pages/Home.jsx";
 import NotFound from "./pages/errors/NotFound.jsx";
 // utils
@@ -30,7 +30,7 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={<LandingPage site_name={capitalizedSiteName} />}
+                element={<DefaultPage site_name={capitalizedSiteName} />}
               />
               <Route
                 path="/home"
