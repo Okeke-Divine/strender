@@ -12,6 +12,7 @@ import Category from "./pages/Category.jsx";
 import About from "./pages/About.jsx";
 import Discover from "./pages/Discover.jsx";
 import News from "./pages/News.jsx";
+import Post from "./pages/Post.jsx";
 import NotFound from "./pages/errors/NotFound.jsx";
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
@@ -46,6 +47,11 @@ function App() {
                   />
                 }
               />
+              <Route path="/category" element={<Category />} />
+              <Route path="/discover" element={<Discover />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/post" element={<Post />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer site_name={capitalizedSiteName} siteDesc={siteDesc} />
