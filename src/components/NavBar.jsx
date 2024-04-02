@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function NavBar({ site_name }) {
+  const location = useLocation();
+  const __location = location.pathname;
+
   const links = [
     { url: "/home", name: "Home" },
     { url: "/category", name: "Category" },
@@ -21,7 +24,7 @@ export default function NavBar({ site_name }) {
                 <div key={index}>
                   <Link
                     className={`${
-                      link.name == "Home"
+                      link.url == __location
                         ? "text-white font-bold border-b-[2px]"
                         : "text-gray-400"
                     } border-yellow-300 duration-300 hover:text-white`}
