@@ -38,7 +38,7 @@ export default function NavBar({ site_name }) {
           </div>
           {/* login and signup button */}
           <div className="flex gap-x-4">
-            <div>
+            {/* <div>
               <button className="duration-300 hover:bg-gray-600 hover:text-white rounded-3xl border-[1px] text-gray-200 border-gray-200 p-1 px-4 md:p-2 md:px-5 cursor-pointer">
                 Login
               </button>
@@ -47,6 +47,12 @@ export default function NavBar({ site_name }) {
               <button className="duration-300 hover:bg-gray-700 rounded-3xl border-[1px] text-white bg-gray-600 border-gray-200 p-1 px-4 md:p-2 md:px-5 cursor-pointer">
                 Signup
               </button>
+            </div> */}
+            <div className="rounded-full bg-gray-600 w-10 h-10 text-white flex justify-center items-center">
+              <i className={`fi fi-ts-category relative top-[0.1rem]`}></i>
+            </div>
+            <div className="flex md:hidden rounded-full bg-gray-600 w-10 h-10 text-white justify-center items-center">
+              <i className={`fi fi-ts-bars-staggered relative top-[0.1rem]`}></i>
             </div>
           </div>
         </div>
