@@ -8,6 +8,10 @@ import Footer from "./components/Footer";
 //pages
 import DefaultPage from "./pages/DefaultPage.jsx";
 import Home from "./pages/Home.jsx";
+import Category from "./pages/Category.jsx";
+import About from "./pages/About.jsx";
+import Discover from "./pages/Discover.jsx";
+import News from "./pages/News.jsx";
 import NotFound from "./pages/errors/NotFound.jsx";
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
