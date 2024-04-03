@@ -1,8 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 export default function NavBar({ site_name }) {
   const location = useLocation();
   const __location = location.pathname;
+
+  const [disSidebar, setDisSidebar] = useState(false);
 
   const links = [
     { url: "/home", name: "Home" },
@@ -20,7 +23,11 @@ export default function NavBar({ site_name }) {
               <Link to="/">{site_name}</Link>
             </div>
             {/* begin link container */}
-            <div className="fixed sm:static top-0 left-0 h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1]">
+            <div
+              className={`fixed sm:static top-0 left-0 h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1] ${
+                disSidebar ? "left-50" : "-left-[100%]"
+              }`}
+            >
               {links.map((link, index) => (
                 <div key={index}>
                   <Link
@@ -30,6 +37,7 @@ export default function NavBar({ site_name }) {
                         : "text-gray-400"
                     } border-yellow-300 duration-300 hover:text-white`}
                     to={link.url}
+                    onClick={() => setDisSidebar(false)}
                   >
                     {link.name}
                   </Link>
@@ -50,15 +58,28 @@ export default function NavBar({ site_name }) {
                 Signup
               </button>
             </div> */}
-            <div className="rounded-full bg-gray-600 w-10 h-10 text-white flex justify-center items-center">
+            <div className="rounded-full bg-gray-600 w-10 h-10 text-white flex justify-center items-center cursor-pointer">
               <i className={`fi fi-ts-category relative top-[0.1rem]`}></i>
             </div>
-            <div className="flex md:hidden rounded-full bg-gray-600 w-10 h-10 text-white justify-center items-center">
-              <i className={`fi fi-ts-bars-staggered relative top-[0.1rem]`}></i>
+            <div
+              className="flex md:hidden rounded-full bg-gray-600 w-10 h-10 text-white justify-center items-center cursor-pointer"
+              onClick={() => setDisSidebar(true)}
+            >
+              <i
+                className={`fi fi-ts-bars-staggered relative top-[0.1rem]`}
+              ></i>
             </div>
           </div>
         </div>
       </div>
+
+      {/* sidebar overlay */}
+      <div
+        className={`${
+          disSidebar ? "block" : "hidden"
+        } fixed top-0 left-0 w-[100%] h-screen bg-black bg-opacity-70 z-[999] sm:hidden`}
+        onClick={() => setDisSidebar(false)}
+      ></div>
     </>
   );
 }
