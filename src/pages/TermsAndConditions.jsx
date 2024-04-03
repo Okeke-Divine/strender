@@ -1,7 +1,7 @@
-export default function Terms(){
+export default function TermsAndConditions(){
     return (
         <>
-            <div>Terms</div>
+            <div>TermsAndConditions</div>
         </>
     )
 }

@@ -14,6 +14,7 @@ import Discover from "./pages/Discover.jsx";
 import News from "./pages/News.jsx";
 import Post from "./pages/Post.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx"
+import TermsAndConditions from "./pages/TermsAndConditions.jsx"
 import NotFound from "./pages/errors/NotFound.jsx";
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
@@ -52,8 +53,10 @@ function App() {
               <Route path="/discover" element={<Discover />} />
               <Route path="/news" element={<News />} />
               <Route path="/about" element={<About />} />
+              <Route path="/credits" element={<Credits />} />
               <Route path="/post" element={<Post />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/t&c" element={<TermsAndConditions />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer site_name={capitalizedSiteName} siteDesc={siteDesc} />
