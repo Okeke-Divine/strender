@@ -8,11 +8,14 @@ export default function NavBar({ site_name }) {
   const [disSidebar, setDisSidebar] = useState(false);
 
   const links = [
-    { url: "/home", name: "Home" },
-    { url: "/category", name: "Category" },
-    { url: "/discover", name: "Discover" },
+    { url: "/home", name: "Home", smallScreenOnly: false },
+    { url: "/category", name: "Category", smallScreenOnly: false },
+    { url: "/discover", name: "Discover", smallScreenOnly: false },
     // { url: "/news", name: "News" },
-    { url: "/about", name: "About" },
+    { url: "/about", name: "About", smallScreenOnly: false },
+    { url: "/credits", name: "Credits", smallScreenOnly: true },
+    { url: "/privacy-policy", name: "Privacy Policy", smallScreenOnly: true },
+    { url: "/t&c", name: "T & C", smallScreenOnly: true },
   ];
   return (
     <>
@@ -33,7 +36,8 @@ export default function NavBar({ site_name }) {
                       link.url == __location
                         ? "text-white font-bold border-b-[2px]"
                         : "text-gray-400"
-                    } border-yellow-300 duration-300 hover:text-white`}
+                    } border-yellow-300 duration-300 hover:text-white ${link.smallScreenOnly ? 'block sm:hidden' : ''}
+                    w-fit`}
                     to={link.url}
                     onClick={() => setDisSidebar(false)}
                   >
