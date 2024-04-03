@@ -11,7 +11,7 @@ export default function NavBar({ site_name }) {
     { url: "/home", name: "Home" },
     { url: "/category", name: "Category" },
     { url: "/discover", name: "Discover" },
-    { url: "/news", name: "News" },
+    // { url: "/news", name: "News" },
     { url: "/about", name: "About" },
   ];
   return (

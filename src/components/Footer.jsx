@@ -18,10 +18,10 @@ export default function Footer({ site_name, siteDesc }) {
       name: "Discover",
       url: "/discover",
     },
-    {
-      name: "News",
-      url: "/news",
-    },
+    // {
+    //   name: "News",
+    //   url: "/news",
+    // },
     {
       name: "About",
       url: "/about",
