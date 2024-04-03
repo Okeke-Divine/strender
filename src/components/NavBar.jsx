@@ -24,10 +24,7 @@ export default function NavBar({ site_name }) {
             </div>
             {/* begin link container */}
             <div
-              className={`fixed top-0 sm:static h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1]
-              ${
-                (disSidebar == true) ? "left-0" : "-left-full"
-              }`}
+              className={`fixed top-0 ${(disSidebar == true) ? "left-0" : "-left-[1000%]" } sm:static h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1]`}
             >
               {links.map((link, index) => (
                 <div key={index}>
