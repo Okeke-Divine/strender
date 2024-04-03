@@ -1,5 +1,5 @@
 export default function SetDocumentTitle({title}) {
-    const newTitle = title + " - Jujora";
+    const newTitle = title + " - Strender";
     return (
         <head>
             <title>{newTitle}</title>
