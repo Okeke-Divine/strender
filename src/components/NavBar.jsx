@@ -19,6 +19,7 @@ export default function NavBar({ site_name }) {
             <div className="text-white font-bold text-2xl md:text-3xl cursor-pointer">
               <Link to="/">{site_name}</Link>
             </div>
+            {/* begin link container */}
             <div className="hidden sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300">
               {links.map((link, index) => (
                 <div key={index}>
@@ -35,6 +36,7 @@ export default function NavBar({ site_name }) {
                 </div>
               ))}
             </div>
+            {/* end link container */}
           </div>
           {/* login and signup button */}
           <div className="flex gap-x-4">
