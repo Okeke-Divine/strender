@@ -1,3 +1,4 @@
+import DocumentTittle from "../utils/documentTitle";
 import SocialIconComp1 from "../components/SocialIconComp1";
 import HighLights from "../components/HighLights";
 import Category from "../components/Category";
@@ -34,6 +35,7 @@ function __PartialHero({siteDesc}) {
 export default function Home({ site_name, siteDesc, lastestNewsDesc }) {
   return (
     <>
+      <DocumentTittle title="Home" />
       <__PartialHero siteDesc={siteDesc} />
       <main className="mainComponent">
         <HighLights />

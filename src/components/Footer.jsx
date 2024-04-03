@@ -44,12 +44,12 @@ export default function Footer({ site_name, siteDesc }) {
               <div className="mt-2">
                 {links1.map((link, index) => (
                   <div key={index}>
-                    <a
-                      href={link.url}
+                    <Link
+                      to={link.url}
                       className="text-gray-400 duration-300 hover:text-white"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -58,20 +58,20 @@ export default function Footer({ site_name, siteDesc }) {
             <div className="mt-1 md:mt-0 w-full md:w-1/3 p-2">
               <div className="font-bold text-xl text-white">Legal</div>
               <div className="mt-2">
-                <a
-                  href="/t&c"
+                <Link
+                  to="/t&c"
                   className="text-gray-400 duration-300 hover:text-white"
                 >
                   Terms & Conditions
-                </a>
+                </Link>
               </div>
               <div>
-                <a
-                  href="/privacy-policy"
+                <Link
+                  to="/privacy-policy"
                   className="text-gray-400 duration-300 hover:text-white"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </div>
             </div>
             {/* footer link container */}
@@ -79,12 +79,12 @@ export default function Footer({ site_name, siteDesc }) {
               <div className="font-bold text-xl text-white">Extra (Other)</div>
               <div className="mt-2">
                 <div>
-                  <a
-                    href="/credits"
+                  <Link
+                    to="/credits"
                     className="text-gray-400 duration-300 hover:text-white"
                   >
                     Credits
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -96,9 +96,9 @@ export default function Footer({ site_name, siteDesc }) {
         </div>
         <div className="text-center text-white font-semibold text-md">
           &copy; {site_name} 2024 - Built by{" "}
-          <a href="https://okekedivine.vercel.app" target={"_blank"}>
+          <Link href="https://okekedivine.vercel.app" target={"_blank"}>
             <span className="cs-text-yellow-1">Dev Divine</span>
-          </a>
+          </Link>
         </div>
       </div>
     </>

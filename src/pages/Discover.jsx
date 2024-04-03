@@ -1,3 +1,5 @@
+import DocumentTittle from "../utils/documentTitle";
+
 export default function Discover(){
     return (
         <>

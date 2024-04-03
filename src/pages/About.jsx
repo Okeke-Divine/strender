@@ -1,8 +1,10 @@
+import DocumentTittle from "../utils/documentTitle";
 import AboutJson from "../data/about.json";
 
 export default function About() {
   return (
     <>
+      <DocumentTittle title="About" />
       <main className="mainComponent">
         {AboutJson.map((section, index) => (
           <div key={index} className="mb-8">

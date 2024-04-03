@@ -1,3 +1,4 @@
+import DocumentTittle from "../../utils/documentTitle";
 import { Link } from "react-router-dom";
 // utils
 import { __window_back } from "../../utils/windowNavigation";
@@ -7,6 +8,7 @@ import _Illustration404 from "../../assets/svgs/404-illustration.svg";
 export default function NotFound() {
   return (
     <>
+    <DocumentTittle title="404 Not Found" />
       <main className="mt-5 px-5 min-h-[500px] sm:px-10 md:px-20 lg:px-36 flex items-center">
         <div className="block md:flex w-full items-center justify-between">
           <div className="w-full md:w-1/2">

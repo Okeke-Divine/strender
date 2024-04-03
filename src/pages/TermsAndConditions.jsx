@@ -1,8 +1,10 @@
+import DocumentTittle from "../utils/documentTitle";
 import TC from "../data/T&C.json";
 
 export default function TermsAndConditions(){
     return (
         <>
+         <DocumentTittle title="Terms and Conditions" />
             <main className="mainComponent">
                 {TC.sections.map((section, index) => (
                     <div key={index} className="mb-8">
