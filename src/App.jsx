@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import DefaultPage from "./pages/DefaultPage.jsx";
 import Home from "./pages/Home.jsx";
 import Category from "./pages/Category.jsx";
+import Credits from "./pages/Credits.jsx";
 import About from "./pages/About.jsx";
 import Discover from "./pages/Discover.jsx";
 import News from "./pages/News.jsx";
