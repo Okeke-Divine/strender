@@ -13,6 +13,7 @@ import About from "./pages/About.jsx";
 import Discover from "./pages/Discover.jsx";
 import News from "./pages/News.jsx";
 import Post from "./pages/Post.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx"
 import NotFound from "./pages/errors/NotFound.jsx";
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
@@ -52,6 +53,7 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/about" element={<About />} />
               <Route path="/post" element={<Post />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer site_name={capitalizedSiteName} siteDesc={siteDesc} />
