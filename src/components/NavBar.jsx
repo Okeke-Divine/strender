@@ -20,7 +20,7 @@ export default function NavBar({ site_name }) {
   return (
     <>
       <div className="p-5 md:py-8 px-5 md:px-10 bg-cs-dark-light">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center flex-wrap">
           <div className="block sm:flex items-center sm:gap-x-5 md:gap-x-16 lg:gap-x-32 duration-300">
             <div className="flex gap-x-2 items-center text-white font-bold text-2xl md:text-3xl cursor-pointer">
              <div>
@@ -30,7 +30,7 @@ export default function NavBar({ site_name }) {
             </div>
             {/* begin link container */}
             <div
-              className={`fixed top-0 ${(disSidebar == true) ? "left-0" : "-left-full" } sm:static h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1]`}
+              className={`fixed top-0 ${(disSidebar == true) ? "left-0" : "-left-[200%]" } sm:static h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1]`}
             >
               {links.map((link, index) => (
                 <div key={index}>
