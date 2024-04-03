@@ -24,7 +24,7 @@ export default function NavBar({ site_name }) {
           <div className="block sm:flex items-center sm:gap-x-5 md:gap-x-16 lg:gap-x-32 duration-300">
             <div className="flex gap-x-2 items-center text-white font-bold text-2xl md:text-3xl cursor-pointer">
              <div>
-              <img src="/assets/images/strender.png" className="w-7 h-7" />
+              <img src="/assets/images/application-logo.png" className="w-7 h-7" />
              </div>
              <div> <Link to="/">{site_name}</Link></div>
             </div>
