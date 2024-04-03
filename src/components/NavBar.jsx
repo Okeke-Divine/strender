@@ -24,8 +24,9 @@ export default function NavBar({ site_name }) {
             </div>
             {/* begin link container */}
             <div
-              className={`fixed sm:static top-0 left-0 h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1] ${
-                disSidebar ? "left-50" : "-left-[100%]"
+              className={`fixed top-0 sm:static h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1]
+              ${
+                (disSidebar == true) ? "left-0" : "-left-full"
               }`}
             >
               {links.map((link, index) => (
@@ -76,7 +77,7 @@ export default function NavBar({ site_name }) {
       {/* sidebar overlay */}
       <div
         className={`${
-          disSidebar ? "block" : "hidden"
+          (disSidebar == true) ? "block" : "hidden"
         } fixed top-0 left-0 w-[100%] h-screen bg-black bg-opacity-70 z-[999] sm:hidden`}
         onClick={() => setDisSidebar(false)}
       ></div>
