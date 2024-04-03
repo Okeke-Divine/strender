@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function LandingPage({ site_name }) {
+  document.location = "/home";
   return (
     <>
       <main className="mainComponent">
