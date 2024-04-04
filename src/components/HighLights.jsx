@@ -21,7 +21,7 @@ export default function HighLights() {
 
   return (
     <>
-      <div className="block md:flex gap-x-5 items-center">
+      <div className="block md:flex gap-x-5 items-start">
         {loading ? (
           <>
             <span className="text-gray-400">Loading...</span>
