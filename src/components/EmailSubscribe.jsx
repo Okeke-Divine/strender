@@ -40,6 +40,7 @@ export default function EmailSubscribe() {
         <div className="my-5">
           <div className="font-bold">Category(s) of interest*</div>
           <div className="mt-2 flex gap-2 flex-wrap">
+            <__Checkbox name="All" />
             {categories.map((category, index) => (
               <>
                 <__Checkbox name={category.name} />
