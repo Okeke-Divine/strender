@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../utils/api";
-import formatDate from "../utils/formatDate"
+import formatDate from "../utils/formatDate";
+import NotFound from "../pages/errors/NotFound.jsx";
 
 import DocumentTittle from "../utils/documentTitle";
 import __Tag from "../components/__Tag";
@@ -10,15 +11,30 @@ import EmailSubscribe from "../components/EmailSubscribe";
 export default function Post() {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
-  const fDate = (post != null) ? formatDate(post.published_at) : null;
+  const [notFound, setNotFound] = useState(false);
+  const fDate = post != null ? formatDate(post.published_at) : null;
+
+  const updatePostViews = async (postId) => {
+    try {
+      await api.patch(`post/${postId}/update-views/`);
+    } catch (error) {
+      console.error("Error updating post views:", error);
+    }
+  };
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
         const response = await api.get(`post/${slug}`);
-        setPost(response.data);
+        if (response.status !== 404) {
+          setPost(response.data);
+          updatePostViews(response.data.post_id);
+        } else {
+          setNotFound(true);
+        }
       } catch (error) {
         console.error("Error fetching post:", error);
+        setNotFound(true);
       }
     };
 
@@ -26,6 +42,7 @@ export default function Post() {
   }, [slug]);
   return (
     <>
+    {notFound ? (<NotFound />) : null}
       {post ? (
         <>
           <DocumentTittle title={post.title} />
@@ -40,29 +57,26 @@ export default function Post() {
                   <__Tag name="Football" />
                 </div>
                 {/* post title */}
-                <div className="my-3 font-bold text-2xl">
-                  {post.title}
-                </div>
+                <div className="my-3 font-bold text-2xl">{post.title}</div>
                 {/* post author, date, views */}
                 <div className="flex items-center gap-x-3 font-semibold mt-1">
                   <div>{post.author}</div>
-                  <div className="text-gray-500">22 Sept 2022</div>
+                  <div className="text-gray-500">{fDate}</div>
                   <div>.</div>
-                  <div className="text-gray-500"> 234 views</div>
+                  <div className="text-gray-500"> {post.total_views} views</div>
                 </div>
                 {/* post content */}
-                <div className="text-gray-500 mt-3">
-                  {post.content}
-                </div>
+                <div
+                  className="text-gray-500 mt-3"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                ></div>
                 {/* post tags */}
                 <div className="mt-5">
                   <div className="font-bold mb-2">Tags:</div>
                   <div className="flex gap-2 flex-wrap">
-                    {/* {post.tags.map((tag,index) => (
-                    <__Tag name={tag.name} />
-                    ))} */}
-                    <__Tag name="Sports" />
-                    <__Tag name="Ronaldo" />
+                    {post.tags.split(", ").map((tag, index) => (
+                      <__Tag key={index} name={tag.trim()} />
+                    ))}
                   </div>
                 </div>
                 {/* comments */}
@@ -77,10 +91,14 @@ export default function Post() {
           </main>
         </>
       ) : (
-        <div className="min-h-[80vh] flex justify-center items-center">
+        <>
+        {notFound ? null : (
+          <div className="min-h-[80vh] flex justify-center items-center">
           <div className="text-white text-4xl font-bold">Loading...</div>
         </div>
-)}
+        )}
+        </>
+      )}
     </>
   );
 }
