@@ -39,7 +39,7 @@ export default function MostRead() {
                 url={"/post/" + post.slug}
                 title={post.title}
                 author={post.author}
-                date={"28 Jan 2024"}
+                date={post.published_at}
                 views={"32M"}
                 key={index}
               />

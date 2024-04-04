@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import formatDate from "../utils/formatDate"
 
 export default function MostReadPostElem({ url, title, author, date, views }) {
+  const fDate = formatDate(date);
   return (
     <>
       <Link to={url} className="w-full">
@@ -12,7 +14,7 @@ export default function MostReadPostElem({ url, title, author, date, views }) {
             <div className="font-bold text-white">{title}</div>
             <div className="text-gray-400 font-semibold">{author}</div>
             <div className="block md:flex text-gray-400 gap-x-2 justify-between items-center">
-              <div>{date}</div>
+              <div>{fDate}</div>
               <div className="hidden md:block">
                 <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
               </div>

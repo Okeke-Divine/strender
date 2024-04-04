@@ -34,7 +34,7 @@ export default function HighLights() {
             <SportCardHeadlines
               title={highlight.title.length > 50 ? `${highlight.title.slice(0,50)}...`: highlight.title}
               newsChannel={highlight.author}
-              date={"28 Jan 2024"}
+              date={highlight.published_at}
               url={"/post/" + highlight.slug}
             />
           </div>
