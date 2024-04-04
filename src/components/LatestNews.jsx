@@ -101,7 +101,7 @@ export default function LatestNews({ lastestNewsDesc }) {
   return (
     <>
       <div className="mt-5">
-        <ComponentTitle title="Latest News" url="/news?sort_by=latest" />
+        <ComponentTitle title="Latest News" url="/discover?sort_by=latest" />
         <div className="mt-1 text-gray-400 font-semibold">
           {lastestNewsDesc}
         </div>
