@@ -7,7 +7,6 @@ export default function LatestNewsPost({
   thumbnail,
   author,
 }) {
-  console.log(url);
   return (
     <div className="hover:opacity-90 duration-300">
       <div className="flex flex-col justify-between h-full">
