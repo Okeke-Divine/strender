@@ -1,14 +1,16 @@
 import DocumentTittle from "../utils/documentTitle";
 import __Tag from "../components/__Tag";
+import EmailSubscribe from "../components/EmailSubscribe";
 
-export default function About() {
+export default function Post() {
   return (
     <>
+    <DocumentTittle title="Post name" />
       <main className="mainComponent2 mt-2">
         <div className="w-full h-[300px] bg-blue-200 rounded-3xl"></div>
       </main>
       <main className="mainComponent relative -top-20 mb-[-5rem]">
-        <div className="block md:flex bg-white rounded-xl shadow-lg p-5">
+        <div className="block md:flex bg-white rounded-xl shadow-lg p-5 gap-5">
           <div className="w-full md:w-4/6">
             {/* category */}
             <div>
@@ -105,7 +107,9 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="mt-5 md:mt-0 w-full md:w-2/6">2</div>
+          <div className="mt-5 md:mt-0 w-full md:w-2/6 border-l-2 h-fit p-5">
+           <EmailSubscribe />
+          </div>
         </div>
       </main>
     </>
