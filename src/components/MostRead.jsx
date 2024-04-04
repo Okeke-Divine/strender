@@ -40,7 +40,7 @@ export default function MostRead() {
                 title={post.title}
                 author={post.author}
                 date={post.published_at}
-                views={"32M"}
+                views={post.total_views}
                 key={index}
               />
             ))}

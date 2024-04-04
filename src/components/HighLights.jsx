@@ -10,7 +10,7 @@ export default function HighLights() {
     const fetchHighLight = async () => {
       try {
         const response = await api.get("posts-preview/type-1/");
-        setHighlights([response.data[0], response.data[1], response.data[2]]);
+        setHighlights(response.data);
         setLoading(false);
       } catch (error) {
         console.log("Error fetching highlights:", error);

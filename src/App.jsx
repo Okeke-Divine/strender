@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import DefaultPage from "./pages/DefaultPage.jsx";
 import Home from "./pages/Home.jsx";
 import Category from "./pages/Category.jsx";
+import CategoryPostList from "./pages/CategoryPostList"
 import Credits from "./pages/Credits.jsx";
 import About from "./pages/About.jsx";
 import Discover from "./pages/Discover.jsx";
@@ -51,6 +52,7 @@ function App() {
                 }
               />
               <Route path="/category" element={<Category lastestNewsDesc={lastestNewsDesc} />} />
+              <Route path="/category/:name" element={<CategoryPostList lastestNewsDesc={lastestNewsDesc} />} />
               <Route path="/discover" element={<Discover lastestNewsDesc={lastestNewsDesc} />} />
               <Route path="/news" element={<News />} />
               <Route path="/about" element={<About />} />
