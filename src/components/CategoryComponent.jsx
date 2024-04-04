@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function CategoryComponent({ category }) {
+  const total_posts = category.total_posts;
   return (
     <>
       <Link to={"/category/" + category.name}>
@@ -10,7 +11,7 @@ export default function CategoryComponent({ category }) {
           </div>
           <div className="w-full">
             <div className="text-bold text-lg">{category.name}</div>
-            <div className="text-gray-400 text-sm">12M posts</div>
+            <div className="text-gray-400 text-sm">{total_posts} posts</div>
           </div>
         </div>
       </Link>

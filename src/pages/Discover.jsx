@@ -20,7 +20,7 @@ export default function Discover({ lastestNewsDesc}) {
           </div>
         </div>
         <div className="mt-5">
-          <LatestNews lastestNewsDesc={lastestNewsDesc} config={{total: 9, type: 'random'}} />
+          <LatestNews lastestNewsDesc={lastestNewsDesc} config={{total: 12, type: 'random'}} />
         </div>
       </main>
     </>
