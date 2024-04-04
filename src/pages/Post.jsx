@@ -17,7 +17,7 @@ export default function Post() {
               <__Tag name="Football" />
             </div>
             {/* post title */}
-            <div className="mt-3 font-bold text-2xl">
+            <div className="my-3 font-bold text-2xl">
               NBA Star Giannis Antetokounmpo Launches Foundation to Empower
               Youth Through Basketball
             </div>
@@ -105,6 +105,10 @@ export default function Post() {
                 <__Tag name="Sports" />
                 <__Tag name="Ronaldo" />
               </div>
+            </div>
+            {/* comments */}
+            <div className="mt-5">
+              <div className="font-bold mb-2">Comments:</div>
             </div>
           </div>
           <div className="mt-5 md:mt-0 w-full md:w-2/6 border-l-2 h-fit p-5">

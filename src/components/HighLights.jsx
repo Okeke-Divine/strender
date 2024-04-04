@@ -32,7 +32,7 @@ export default function HighLights() {
         {highlights.map((highlight, index) => (
           <div className="mt-2 md:mt-0 w-full md:w-1/3" key={index}>
             <SportCardHeadlines
-              title={highlight.title}
+              title={highlight.title.length > 50 ? `${highlight.title.slice(0,50)}...`: highlight.title}
               newsChannel={highlight.author}
               date={"28 Jan 2024"}
               url={"/post/" + highlight.slug}
