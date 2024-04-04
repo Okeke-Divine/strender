@@ -6,7 +6,7 @@ export default function SportCardHeadlines({title,newsChannel,date, url}) {
     ["bg-green-500", "text-green-200"],
     ["bg-blue-500", "text-blue-200"]
   ]
-  const col = ["bg-blue-400", "text-blue-300"]
+  const col = ["bg-blue-400", "text-white"]
   return (
     <>
     <Link to={url}>
