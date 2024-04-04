@@ -9,7 +9,7 @@ export default function SetDocumentTitle({ title }) {
     // Optionally, return a cleanup function if necessary
     return () => {
       // Reset the document title when the component unmounts
-      document.title = "Jujora";
+      document.title = "Strender";
     };
   }, [title]); // Run this effect whenever 'title' prop changes
 
