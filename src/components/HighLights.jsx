@@ -34,7 +34,7 @@ export default function HighLights() {
             <SportCardHeadlines
               title={highlight.title}
               newsChannel={highlight.author}
-              date={""}
+              date={"28 Jan 2024"}
               url={"/post/" + highlight.slug}
             />
           </div>
