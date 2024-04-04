@@ -1,27 +1,22 @@
+import { useState, useEffect } from "react";
+import api from "../utils/api"
 // components
 import SportCardHeadlines from "../components/SportCardHeadlines";
 
 export default function HighLights() {
-  const highlights = [
-    {
-      title: "C. Ronaldo injured in the UCL final",
-      newsChannel: "UCL News Media",
-      date: "26 Jul 2024",
-      cols: ["bg-blue-500", "text-blue-200"],
-    },
-    {
-      title: "Kelvin De Brunye transfered to R.Md",
-      newsChannel: "Fifa",
-      date: "26 Jul 2023",
-      cols: ["bg-green-500", "text-green-200"],
-    },
-    {
-        title: "C. Ronaldo injured in the UCL final",
-        newsChannel: "UCL News Media",
-        date: "26 Jul 2024",
-        cols: ["bg-orange-500", "text-orange-100"],
-      },
-  ];
+  const [highlights, setHighlights] = useState([])
+  useEffect(function(){
+    const fetchHighLight = async () => {
+      try{
+        const response = await api.get('posts-preview/type-1/');
+        setHighlights([response.data[0],response.data[1],response.data[2]])
+      }catch(error){
+        console.log('Error fetching highlights:',error);
+      }
+    }
+    fetchHighLight()
+  },[])
+
   return (
     <>
       <div className="block md:flex gap-x-5 items-center">
@@ -29,9 +24,9 @@ export default function HighLights() {
           <div className="mt-2 md:mt-0 w-full md:w-1/3" key={index}>
             <SportCardHeadlines
               title={highlight.title}
-              newsChannel={highlight.newsChannel}
-              date={highlight.date}
-              col={highlight.cols}
+              newsChannel={highlight.author}
+              date={''}
+              url={'/post/'+highlight.slug}
             />
           </div>
         ))}
