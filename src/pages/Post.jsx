@@ -28,23 +28,81 @@ export default function About() {
             </div>
             {/* post content */}
             <div className="text-gray-500 mt-3">
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
-              <p className="mb-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vel architecto laboriosam dolor rerum nobis cumque optio est. Adipisci magnam id architecto accusantium sunt aliquam aliquid quod natus ullam voluptate.</p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
+              <p className="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                vel architecto laboriosam dolor rerum nobis cumque optio est.
+                Adipisci magnam id architecto accusantium sunt aliquam aliquid
+                quod natus ullam voluptate.
+              </p>
             </div>
             {/* post tags */}
-            <div className="flex gap-2 flex-wrap mt-2">
-              <__Tag name="Football" />
-              <__Tag name="Sports" />
-              <__Tag name="Ronaldo" />
+            <div className="mt-5">
+              <div className="font-bold mb-2">Tags:</div>
+              <div className="flex gap-2 flex-wrap">
+                <__Tag name="Football" />
+                <__Tag name="Sports" />
+                <__Tag name="Ronaldo" />
+              </div>
             </div>
           </div>
           <div className="mt-5 md:mt-0 w-full md:w-2/6">2</div>
