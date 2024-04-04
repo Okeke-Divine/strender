@@ -51,7 +51,7 @@ export default function MostRead() {
   return (
     <>
       <div className="mt-5">
-        <ComponentTitle title="Most Read" url="/posts?sort_by=most-read" />
+        <ComponentTitle title="Most Read" url="/discover?sort_by=most-read" />
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2">
             {mostReadPosts.map((post, index) => (

@@ -5,8 +5,13 @@ export default function Discover() {
     <>
       <DocumentTittle title="Discover" />
       <main className="mainComponent">
-        <div className="text-xl text-white">
-          Http server esponded - Discover
+        <div className="flex bg-white rounded-lg p-2">
+          <div className="w-full">
+            <input className="w-full bg-transparent" />
+          </div>
+          <div className="w-fit">
+            <button className="bg-transparent cursor-pointer">S</button>
+          </div>
         </div>
       </main>
     </>
