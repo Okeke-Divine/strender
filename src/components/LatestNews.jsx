@@ -4,7 +4,10 @@ import api from "../utils/api";
 import ComponentTitle from "../components/__global/ComponentTitle";
 import LatestNewsPost from "../components/LatestNewsPost";
 
-export default function LatestNews({ lastestNewsDesc }) {
+export default function LatestNews({
+  lastestNewsDesc,
+  config = { total: 12, type: "random" },
+}) {
   const [lastestNews, setLatestNews] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(function () {

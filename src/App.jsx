@@ -51,7 +51,7 @@ function App() {
                 }
               />
               <Route path="/category" element={<Category lastestNewsDesc={lastestNewsDesc} />} />
-              <Route path="/discover" element={<Discover />} />
+              <Route path="/discover" element={<Discover lastestNewsDesc={lastestNewsDesc} />} />
               <Route path="/news" element={<News />} />
               <Route path="/about" element={<About />} />
               <Route path="/credits" element={<Credits />} />
