@@ -23,14 +23,22 @@ export default function NavBar({ site_name }) {
         <div className="flex justify-between items-center flex-wrap">
           <div className="block sm:flex items-center sm:gap-x-5 md:gap-x-16 lg:gap-x-32 duration-300">
             <div className="flex gap-x-2 items-center text-white font-bold text-2xl md:text-3xl cursor-pointer">
-             <div>
-              <img src="/assets/images/application-logo.png" className="w-7 h-7" />
-             </div>
-             <div> <Link to="/">{site_name}</Link></div>
+              <div>
+                <img
+                  src="/assets/images/application-logo.png"
+                  className="w-7 h-7"
+                />
+              </div>
+              <div>
+                {" "}
+                <Link to="/">{site_name}</Link>
+              </div>
             </div>
             {/* begin link container */}
             <div
-              className={`fixed top-0 ${(disSidebar == true) ? "left-0" : "-left-[200%]" } sm:static h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1]`}
+              className={`fixed top-0 ${
+                disSidebar == true ? "left-0" : "-left-[200%]"
+              } sm:static h-screen sm:h-fit overflow-y-auto w-[250px] sm:w-fit bg-cs-dark-light sm:flex items-center sm:gap-x-3 md:gap-x-5 duration-300 pl-10 pt-10 sm:pl-0 sm:pt-0 sm:overflow-y-hidden shadow-sm sm:shadow-none text-xl sm:text-base z-[1000] sm:z-[1]`}
             >
               {links.map((link, index) => (
                 <div key={index}>
@@ -39,8 +47,9 @@ export default function NavBar({ site_name }) {
                       link.url == __location
                         ? "text-white font-bold border-b-[2px]"
                         : "text-gray-400"
-                    } border-yellow-300 duration-300 hover:text-white ${link.smallScreenOnly ? 'block sm:hidden' : ''}
-                    w-fit`}
+                    } border-yellow-300 duration-300 hover:text-white ${
+                      link.smallScreenOnly ? "block sm:hidden" : ""
+                    } w-fit`}
                     to={link.url}
                     onClick={() => setDisSidebar(false)}
                   >
@@ -66,14 +75,16 @@ export default function NavBar({ site_name }) {
             <div className="rounded-full bg-gray-600 w-10 h-10 text-white flex justify-center items-center cursor-pointer">
               <i className={`fi fi-ts-category relative top-[0.1rem]`}></i>
             </div>
-            <div
-              className="flex md:hidden rounded-full bg-gray-600 w-10 h-10 text-white justify-center items-center cursor-pointer"
-              onClick={() => setDisSidebar(true)}
-            >
-              <i
-                className={`fi fi-ts-bars-staggered relative top-[0.1rem]`}
-              ></i>
-            </div>
+            <Link to="/discover?action=search">
+              <div
+                className="flex md:hidden rounded-full bg-gray-600 w-10 h-10 text-white justify-center items-center cursor-pointer"
+                onClick={() => setDisSidebar(true)}
+              >
+                <i
+                  className={`fi fi-ts-bars-staggered relative top-[0.1rem]`}
+                ></i>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -81,7 +92,7 @@ export default function NavBar({ site_name }) {
       {/* sidebar overlay */}
       <div
         className={`${
-          (disSidebar == true) ? "block" : "hidden"
+          disSidebar == true ? "block" : "hidden"
         } fixed top-0 left-0 w-[100%] h-screen bg-black bg-opacity-70 z-[999] sm:hidden`}
         onClick={() => setDisSidebar(false)}
       ></div>
