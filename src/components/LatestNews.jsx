@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import api from "../utils/api"
 //components
 import ComponentTitle from "../components/__global/ComponentTitle";
 import LatestNewsPost from "../components/LatestNewsPost";
@@ -98,7 +100,18 @@ export default function LatestNews({ lastestNewsDesc }) {
   //   },
   // ];
 
-    const [lastestNews, setLatestNews] = useState([]);
+  const [lastestNews, setLatestNews] = useState([]);
+  useEffect(function(){
+    const fetchNews = async () => {
+      try{
+        const response  = await api.get('posts-preview/type-3/');
+        setLatestNews(response.data);
+      }catch(error){
+        console.error('Error fetching news:', error);
+      }
+    }
+    fetchNews();
+  }, [])
 
   return (
     <>
@@ -112,9 +125,10 @@ export default function LatestNews({ lastestNewsDesc }) {
             {lastestNews.map((news, index) => (
               <LatestNewsPost
                 title={news.title}
-                previewText={news.previewText}
-                url={news.url}
-                thumbnail={news.thumbnail}
+                previewText={news.summary}
+                url={'/post/'+news.slug}
+                thumbnail={news.img_url}
+                author={news.author}
                 key={index}
               />
             ))}
