@@ -29,7 +29,7 @@ export default function MostRead() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2">
             {loading ? (
               <>
-                <span className="text-white">Loading...</span>
+                <span className="text-gray-400">Loading...</span>
               </>
             ) : (
               ""
