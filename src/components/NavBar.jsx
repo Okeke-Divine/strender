@@ -72,19 +72,19 @@ export default function NavBar({ site_name }) {
                 Signup
               </button>
             </div> */}
-            <div className="rounded-full bg-gray-600 w-10 h-10 text-white flex justify-center items-center cursor-pointer">
-              <i className={`fi fi-ts-category relative top-[0.1rem]`}></i>
-            </div>
             <Link to="/discover?action=search">
-              <div
-                className="flex md:hidden rounded-full bg-gray-600 w-10 h-10 text-white justify-center items-center cursor-pointer"
-                onClick={() => setDisSidebar(true)}
-              >
-                <i
-                  className={`fi fi-ts-bars-staggered relative top-[0.1rem]`}
-                ></i>
+              <div className="rounded-full bg-gray-600 w-10 h-10 text-white flex justify-center items-center cursor-pointer">
+                <i className={`fi fi-ts-category relative top-[0.1rem]`}></i>
               </div>
             </Link>
+            <div
+              className="flex md:hidden rounded-full bg-gray-600 w-10 h-10 text-white justify-center items-center cursor-pointer"
+              onClick={() => setDisSidebar(true)}
+            >
+              <i
+                className={`fi fi-ts-bars-staggered relative top-[0.1rem]`}
+              ></i>
+            </div>
           </div>
         </div>
       </div>
