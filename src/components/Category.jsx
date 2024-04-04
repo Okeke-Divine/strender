@@ -1,23 +1,24 @@
 //components
+import api from "../utils/api"
+import { useEffect, useState } from "react";
 import ComponentTitle from "./__global/ComponentTitle";
 import CategoryCardCircle from "./CategoryCardCircle";
 
 export default function Category() {
-  const categories = [
-    { title: "All", url: "/sports/all" },
-    { title: "Football", url: "/sports/football" },
-    { title: "Basketball", url: "/sports/basketball" },
-    { title: "Boxing", url: "/sports/boxing" },
-    { title: "Volley Ball", url: "/sports/volleyball" },
-    { title: "Basketball", url: "/sports/basketball" },
-    { title: "Hockey", url: "/sports/hockey" },
-    { title: "Dart", url: "/sports/dart" },
-    { title: "Pokers", url: "/sports/pokers" },
-    { title: "Race", url: "/sports/race" },
-    { title: "Tonarments", url: "/sports/tonarments" },
-    { title: "Sprints", url: "/sports/sprints" },
-    { title: "Others", url: "/sports/all" },
-  ];
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await api.get('categories/');
+        setCategories(response.data);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+  
   return (
     <>
       <div className="mt-5">
@@ -26,8 +27,8 @@ export default function Category() {
         <div className="flex gap-x-5 overflow-auto whitespace-nowrap mt-2 scroll-bar-track-2">
           {categories.map((category, index) => (
             <CategoryCardCircle
-              title={category.title}
-              url={category.url}
+              title={category.name}
+              url={"/category/"+category.name}
               key={index}
             />
           ))}
