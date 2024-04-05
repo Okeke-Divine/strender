@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import api from "../utils/api";
 
 export default function Comment({ post_id }) {
@@ -8,9 +8,7 @@ export default function Comment({ post_id }) {
   const c_img_list = [
     '/assets/images/user-icon-1.png',
     '/assets/images/user-icon-2.png'
-  ]
-  const randomIndex = Math.floor(Math.random() * c_img_list.length);
-  const c_img = c_img_list[randomIndex];
+  ];
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -25,7 +23,8 @@ export default function Comment({ post_id }) {
     fetchComments();
   }, [post_id]);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
     try {
       const response = await api.post("/add_comment/", {
         post_id,
@@ -42,7 +41,7 @@ export default function Comment({ post_id }) {
   return (
     <>
       <div className="mt-5">
-        <form>
+        <form onSubmit={handleSubmit}>
           <textarea
             placeholder="What's on your mind? (Anonymous)"
             className="outline-none rounded-lg border-2 p-5 w-full"
@@ -53,8 +52,7 @@ export default function Comment({ post_id }) {
           <br />
           <button
             className="uppercase py-3 px-10 w-fit bg-blue-500 text-white rounded-lg text-sm font-semibold tracking-[1px]"
-            type="button"
-            onClick={handleSubmit}
+            type="submit" // Change type to "submit" to trigger form submission
           >
             Submit
           </button>
@@ -72,8 +70,8 @@ export default function Comment({ post_id }) {
               >
                 <div>
                   <img
-                    src={c_img}
-                    className="w-[50px] h-[50px] rounded-full border-2 border-blue-300"
+                    src={c_img_list[Math.floor(Math.random() * c_img_list.length)]} // Assuming your comment object contains c_img field
+                    className="w-[50px] h-[70px]"
                   />
                 </div>
                 <div>
