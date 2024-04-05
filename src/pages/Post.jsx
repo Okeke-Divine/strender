@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import api from "../utils/api";
-import formatDate from "../utils/formatDate";
 import NotFound from "../pages/errors/NotFound.jsx";
 import LatestNews from "../components/LatestNews"
-import DocumentTittle from "../utils/documentTitle";
+import Comment from "../components/Comment"
 import __Tag from "../components/__Tag";
 import EmailSubscribe from "../components/EmailSubscribe";
+//utils
+import DocumentTittle from "../utils/documentTitle";
+import formatDate from "../utils/formatDate";
+import api from "../utils/api";
 
 export default function Post({lastestNewsDesc}) {
   const { slug } = useParams();
@@ -80,23 +82,7 @@ export default function Post({lastestNewsDesc}) {
                   </div>
                 </div>
                 {/* comments */}
-                <div className="mt-5">
-                  <div className="font-bold mb-2">Comments:</div>
-                  <form>
-                    <textarea
-                      placeholder="What's on your mind? (Anonymous)"
-                      className="outline-none rounded-lg border-2 p-5 w-full"
-                      required
-                    ></textarea>
-                    <br />
-                    <button
-                      className="uppercase py-3 px-10 w-fit bg-blue-500 text-white rounded-lg text-sm font-semibold tracking-[1px]"
-                      type="button"
-                    >
-                      Submit
-                    </button>
-                  </form>
-                </div>
+                <Comment post_id={post.post_id} />
               </div>
               <div className="mt-5 md:mt-0 w-full md:w-2/6 border-l-2 h-fit p-5">
                 <EmailSubscribe />
