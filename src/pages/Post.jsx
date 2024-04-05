@@ -25,6 +25,11 @@ export default function Post({lastestNewsDesc}) {
   };
 
   useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  useEffect(() => {
     const fetchPost = async () => {
       try {
         const response = await api.get(`post/${slug}`);
