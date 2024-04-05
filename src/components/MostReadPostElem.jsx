@@ -18,7 +18,7 @@ export default function MostReadPostElem({ url, title, author, date, views }) {
               <div className="hidden md:block">
                 <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
               </div>
-              <div>{views} Readers</div>
+              <div>{views} Reader(s)</div>
             </div>
           </div>
         </div>
