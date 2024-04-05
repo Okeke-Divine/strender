@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import api from "../utils/api";
 import formatDate from "../utils/formatDate";
 import NotFound from "../pages/errors/NotFound.jsx";
-
+import LatestNews from "../components/LatestNews"
 import DocumentTittle from "../utils/documentTitle";
 import __Tag from "../components/__Tag";
 import EmailSubscribe from "../components/EmailSubscribe";
 
-export default function Post() {
+export default function Post({lastestNewsDesc}) {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
   const [notFound, setNotFound] = useState(false);
@@ -54,7 +54,7 @@ export default function Post() {
               <div className="w-full md:w-4/6">
                 {/* category */}
                 <div>
-                  <__Tag name="Football" />
+                  {/* <__Tag name="Football" /> */}
                 </div>
                 {/* post title */}
                 <div className="my-3 font-bold text-2xl">{post.title}</div>
@@ -102,6 +102,7 @@ export default function Post() {
                 <EmailSubscribe />
               </div>
             </div>
+            <LatestNews lastestNewsDesc={lastestNewsDesc} />
           </main>
         </>
       ) : (

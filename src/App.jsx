@@ -57,7 +57,7 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/about" element={<About />} />
               <Route path="/credits" element={<Credits />} />
-              <Route path="/post/:slug" element={<Post />} />
+              <Route path="/post/:slug" element={<Post lastestNewsDesc={lastestNewsDesc} />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/t&c" element={<TermsAndConditions />} />
               <Route path="*" element={<NotFound />} />
