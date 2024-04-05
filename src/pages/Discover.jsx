@@ -6,6 +6,7 @@ export default function Discover({ lastestNewsDesc}) {
     <>
       <DocumentTittle title="Discover" />
       <main className="mainComponent">
+      <form>
         <div className="flex rounded-lg items-center">
           <div className="w-full">
             <input
@@ -14,11 +15,12 @@ export default function Discover({ lastestNewsDesc}) {
             />
           </div>
           <div className="w-fit">
-            <button className="w-10 bg-black text-white rounded-r-lg h-10 cursor-pointer">
+            <button className="w-10 bg-black text-white rounded-r-lg h-10 cursor-pointer" type="button">
               <i className="fi fi-ts-category relative top-[0.1rem]"></i>
             </button>
           </div>
         </div>
+        </form>
         <div className="mt-5">
           <LatestNews lastestNewsDesc={lastestNewsDesc} config={{total: 12, type: 'random'}} />
         </div>
