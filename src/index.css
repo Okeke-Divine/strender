@@ -73,3 +73,7 @@
   opacity: 0.6;
 }
 /* end custom scrollbar */
+
+.commentTextCont{
+  width: calc(100% - 50px);
+}
