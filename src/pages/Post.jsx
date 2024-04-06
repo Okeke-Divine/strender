@@ -61,7 +61,7 @@ export default function Post({lastestNewsDesc}) {
               <div className="w-full md:w-4/6">
                 {/* category */}
                 <div>
-                  {/* <__Tag name="Football" /> */}
+                  <__Tag name={post.category.name} />
                 </div>
                 {/* post title */}
                 <div className="my-3 font-bold text-2xl">{post.title}</div>

@@ -34,7 +34,7 @@ export default function Discover({ lastestNewsDesc }) {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyUp={handleSearch }
+                onKeyUp={handleSearch}
               />
             </div>
             <div className="w-fit">
