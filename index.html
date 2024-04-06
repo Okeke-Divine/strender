@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strender</title>
+  <title>Strender - Your one stop platform for all kinds of news, posts and updates on all things related to sport</title>
   <meta name="description" content="Your one stop platform for all kinds of news, posts and updates on all things related to sport">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="shortcut icon" href="/assets/images/application-logo.png" type="image/x-icon">
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-straight/css/uicons-thin-straight.css'>
   <link rel='stylesheet'
@@ -15,12 +16,25 @@
     href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2431766066357656" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2431766066357656"
+    crossorigin="anonymous"></script>
+  <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>

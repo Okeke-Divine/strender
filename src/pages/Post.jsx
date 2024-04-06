@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NotFound from "../pages/errors/NotFound.jsx";
-import LatestNews from "../components/LatestNews"
-import Comment from "../components/Comment"
+import LatestNews from "../components/LatestNews";
+import Comment from "../components/Comment";
 import __Tag from "../components/__Tag";
 import EmailSubscribe from "../components/EmailSubscribe";
 //utils
@@ -10,7 +10,7 @@ import DocumentTittle from "../utils/documentTitle";
 import formatDate from "../utils/formatDate";
 import api from "../utils/api";
 
-export default function Post({lastestNewsDesc}) {
+export default function Post({ lastestNewsDesc }) {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
   const [notFound, setNotFound] = useState(false);
@@ -26,7 +26,7 @@ export default function Post({lastestNewsDesc}) {
 
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
   useEffect(() => {
@@ -54,7 +54,14 @@ export default function Post({lastestNewsDesc}) {
         <>
           <DocumentTittle title={post.title} />
           <main className="mainComponent2 mt-2">
-            <div className="w-full h-[300px] bg-blue-200 rounded-3xl"></div>
+            <div className="relative w-full h-[300px] rounded-3xl overflow-hidden shadow-md shadow-yellow-400">
+              <img
+                src="/assets/images/banner/pexels-dom-le-roy-3991976.jpg"
+                className="object-cover w-full h-full"
+                alt="Football"
+              />
+              {/* <div className="absolute inset-0 bg-black opacity-30"></div> */}
+            </div>
           </main>
           <main className="mainComponent relative -top-20 mb-[-5rem]">
             <div className="block md:flex bg-white rounded-xl shadow-lg p-5 gap-5">

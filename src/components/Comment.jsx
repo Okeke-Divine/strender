@@ -72,7 +72,7 @@ export default function Comment({ post_id }) {
                 <div className="w-[50px]">
                   <img
                     src={c_img_list[Math.floor(Math.random() * c_img_list.length)]} // Assuming your comment object contains c_img field
-                    className="w-[50px] h-[70px]"
+                    className="w-[70px] h-[70px]"
                   />
                 </div>
                 <div className="commentTextCont break-words">

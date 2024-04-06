@@ -75,5 +75,5 @@
 /* end custom scrollbar */
 
 .commentTextCont{
-  width: calc(100% - 50px);
+  width: calc(100% - 100px);
 }
