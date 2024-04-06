@@ -62,25 +62,27 @@ export default function Comment({ post_id }) {
       <div className="mt-2">
         <div className="font-bold mb-2">Comments:</div>
         {comments.length > 0 ? (
-          <div>
+          <>
+          <div className="">
             {comments.map((comment) => (
               <div
                 key={comment.comment_id}
-                className="flex items-center gap-x-2 md:gap-x-5 mb-2"
+                className="mb-2 flex w-full gap-x-3 items-center bg-red-500"
               >
-                <div className="w-[50px]">
+                <div className="bg-red-200 w-[50px]">
                   <img
                     src={c_img_list[Math.floor(Math.random() * c_img_list.length)]} // Assuming your comment object contains c_img field
                     className="w-[50px] h-[70px]"
                   />
                 </div>
-                <div className="w-full break-words">
+                <div className="bg-yellow-200 commentTextCont break-words">
                   <div className="font-bold">Anonymous</div>
                   <div>{comment.content}</div>
                 </div>
               </div>
             ))}
           </div>
+          </>
         ) : (
           <>
             <div className="text-center">
