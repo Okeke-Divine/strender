@@ -1,7 +1,9 @@
-// api.js
 import axios from 'axios';
 
-const baseURL = 'http://localhost:8000/api/v1/';
+// Determine the base URL based on the environment
+const baseURL = process.env.NODE_ENV === 'production'
+  ? 'https://strender-backend-1.onrender.com/api/v1/'
+  : 'http://localhost:8000/api/v1/';
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
