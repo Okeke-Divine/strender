@@ -66,6 +66,10 @@ export default function Post({ lastestNewsDesc }) {
           <main className="mainComponent relative -top-20 mb-[-5rem]">
             <div className="block md:flex bg-white rounded-xl shadow-lg p-5 gap-5">
               <div className="w-full md:w-4/6">
+                {/* image */}
+                <div className="w-[6rem] h-[6rem] relative -top-[70px] mb-[-60px] rounded-full border-2 border-white">
+          <img src={post.img_url} alt={post.title} className="w-full h-full object-cover rounded-full" />
+                </div>
                 {/* category */}
                 <div>
                   <__Tag name={post.category.name} />

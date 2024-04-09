@@ -10,8 +10,8 @@ export default function LatestNewsPost({
   return (
     <div className="hover:opacity-90 duration-300">
       <div className="flex flex-col justify-between h-full">
-        <div className="w-full bg-blue-200 h-[200px] rounded-lg p-2">
-           <img src={thumbnail} \>
+        <div className="w-full bg-blue-200 h-[200px] rounded-lg p-1 relative">
+          <img src={thumbnail} alt={title} className="w-full h-full object-cover" />
         </div>
         <div>
           <div className="mt-3 font-bold text-xl text-white">{title}</div>
