@@ -39,6 +39,7 @@ export default function MostRead() {
                 url={"/post/" + post.slug}
                 title={post.title}
                 author={post.author}
+                thumbnail={post.img_url}
                 date={post.published_at}
                 views={post.total_views}
                 key={index}
