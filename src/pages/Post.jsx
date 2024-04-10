@@ -4,6 +4,7 @@ import NotFound from "../pages/errors/NotFound.jsx";
 import LatestNews from "../components/LatestNews";
 import Comment from "../components/Comment";
 import __Tag from "../components/__Tag";
+import AdsComponent from "../components/AdsComponent";
 import EmailSubscribe from "../components/EmailSubscribe";
 //utils
 import DocumentTittle from "../utils/documentTitle";
@@ -68,7 +69,11 @@ export default function Post({ lastestNewsDesc }) {
               <div className="w-full md:w-4/6">
                 {/* image */}
                 <div className="w-[6rem] h-[6rem] relative -top-[70px] mb-[-60px] rounded-full border-2 border-white">
-          <img src={post.img_url} alt={post.title} className="w-full h-full object-cover rounded-full" />
+                  <img
+                    src={post.img_url}
+                    alt={post.title}
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
                 {/* category */}
                 <div>
@@ -88,6 +93,8 @@ export default function Post({ lastestNewsDesc }) {
                   className="text-gray-500 mt-3"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 ></div>
+                {/* google ad */}
+                <AdsComponent dataAdSlot="4045176239" />
                 {/* post tags */}
                 <div className="mt-5">
                   <div className="font-bold mb-2">Tags:</div>

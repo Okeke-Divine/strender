@@ -5,18 +5,20 @@ import applicationConfig from "./data/applicationConfig.json";
 // components
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import AdsComponent from "./components/AdsComponent";
+
 //pages
 import DefaultPage from "./pages/DefaultPage.jsx";
 import Home from "./pages/Home.jsx";
 import Category from "./pages/Category.jsx";
-import CategoryPostList from "./pages/CategoryPostList"
+import CategoryPostList from "./pages/CategoryPostList";
 import Credits from "./pages/Credits.jsx";
 import About from "./pages/About.jsx";
 import Discover from "./pages/Discover.jsx";
 import News from "./pages/News.jsx";
 import Post from "./pages/Post.jsx";
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx"
-import TermsAndConditions from "./pages/TermsAndConditions.jsx"
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import NotFound from "./pages/errors/NotFound.jsx";
 // utils
 import capitalizeFirstString from "./utils/capitalizeFirstString";
@@ -38,6 +40,7 @@ function App() {
         <main>
           <BrowserRouter>
             <NavBar site_name={capitalizedSiteName} />
+            <AdsComponent dataAdSlot="4045176239" />
             <Routes>
               <Route
                 path="/"
@@ -53,13 +56,25 @@ function App() {
                   />
                 }
               />
-              <Route path="/category" element={<Category lastestNewsDesc={lastestNewsDesc} />} />
-              <Route path="/category/:name" element={<CategoryPostList lastestNewsDesc={lastestNewsDesc} />} />
-              <Route path="/discover" element={<Discover lastestNewsDesc={lastestNewsDesc} />} />
+              <Route
+                path="/category"
+                element={<Category lastestNewsDesc={lastestNewsDesc} />}
+              />
+              <Route
+                path="/category/:name"
+                element={<CategoryPostList lastestNewsDesc={lastestNewsDesc} />}
+              />
+              <Route
+                path="/discover"
+                element={<Discover lastestNewsDesc={lastestNewsDesc} />}
+              />
               <Route path="/news" element={<News />} />
               <Route path="/about" element={<About />} />
               <Route path="/credits" element={<Credits />} />
-              <Route path="/post/:slug" element={<Post lastestNewsDesc={lastestNewsDesc} />} />
+              <Route
+                path="/post/:slug"
+                element={<Post lastestNewsDesc={lastestNewsDesc} />}
+              />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/t&c" element={<TermsAndConditions />} />
               <Route path="*" element={<NotFound />} />
