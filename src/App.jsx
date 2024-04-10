@@ -30,6 +30,8 @@ function App() {
   useEffect(function () {
     document.title = capitalizedSiteName;
   }, []);
+  console.log(import.meta.env.REACT_APP_API_URL);
+
   return (
     <>
       <div className="bg-cs-dark min-h-[100vh]">
