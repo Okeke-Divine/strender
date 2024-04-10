@@ -4,6 +4,7 @@ import HighLights from "../components/HighLights";
 import Category from "../components/Category";
 import MostRead from "../components/MostRead";
 import LatestNews from "../components/LatestNews";
+import AdsComponent from "../components/AdsComponent";
 
 function __PartialHero({siteDesc}) {
   return (
@@ -38,6 +39,7 @@ export default function Home({ site_name, siteDesc, lastestNewsDesc }) {
       <DocumentTittle title="Home" />
       <__PartialHero siteDesc={siteDesc} />
       <main className="mainComponent">
+        <AdsComponent dataAdSlot='X7XXXXXX5X' />
         <HighLights />
         <Category />
         <MostRead />
